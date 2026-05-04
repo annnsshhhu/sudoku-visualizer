@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="Sudoku.css">
+</head>
+<body>
+
+    <div class="app">
+        <h1>Interactive Sudoku Solver</h1>
+        <p class="subtitle">Solve any puzzle with visualization</p>
+
+        <div id="grid"></div>
+
+        <div class="buttons">
+            <button onclick="loadExample()">Load Example</button>
+            <button id="btnSolve" onclick="startSolving()">Solve</button>
+            <button id="btnStop" class="stop-btn" onclick="stopSolving()" disabled>Stop</button>
+            <button onclick="clearGrid()">Clear</button>
+        </div>
+
+        <div class="speed-row">
+            <span>Speed</span>
+            <input type="range" id="speedSlider" min="0" max="6" step="1" value="3">
+            <span id="speedLabel">Normal</span>
+        </div>
+
+        <div class="status" id="status"></div>
+    </div>
+
+    <script src="Sudoku.js"></script>
+</body>
+</html>
